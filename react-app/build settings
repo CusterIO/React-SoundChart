@@ -1,0 +1,2 @@
+"homepage": "https://localhost:3000/index/SoundChart",
+<BrowserRouter basename="/index/SoundChart">

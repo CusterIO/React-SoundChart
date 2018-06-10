@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-image: linear-gradient(rgb(218, 218, 218), rgb(95, 95, 95), rgb(87, 1, 1));
+  background-size: 100% 100%;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+.active {
+  background-color: rgb(238, 2, 2);
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+nav {
+  width: 400px;
+  text-align: center;
+  margin: auto; /* Center align div element */
+}
+.footer {
+  bottom: auto;
+  width: 400px;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #030303;
+  color: white;
+  text-align: center;
+  margin: auto; /* Center align div element */
+}
+.main { /* navbar */
+  padding: 20 px;
+}
+.components { /* rendered pages */
+  padding-left: 0px;
+  width: 400px;
+  text-align: center;
+  margin: auto; /* Center align div element */
+}
+.card-img-top {
+  /* width: 320px; */
+  width: auto;
+}
+.card {
+  background-image: linear-gradient(rgb(218, 218, 218), rgb(95, 95, 95), rgb(87, 1, 1));
+  width: auto;
+  height: auto;
+  padding-bottom: 0px;
+}
+.card-title {
+  color: white;
+}
+.card-body {
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 400px) {
+  .components { /* rendered pages */
+    width: auto;
+  }
+  .footer {
+    width: auto;
+  }
+  nav {
+    width: auto;
+  }
+}
