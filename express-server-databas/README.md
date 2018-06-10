@@ -1,7 +1,4 @@
-
-## What is the address to your application?
-https://178.62.114.130 , I will only have it up and running while doing the examination. Ive tested it out and everything was working.
-## Describe what you have done to make your application secure, both in code and when configuring your application server
+## Application security, both in code and when configuring application server
 The third party module: "secure-compare" check that the web hook POST really comes from GitHub. By comparing the header('x-hub-signature') with the hashed secret key. 
 
 The third party module: "helmet" helps secure Express apps by setting various HTTP headers.
@@ -14,7 +11,6 @@ General security: You cant access any features of the application if you dont ha
 The app changes "<>" signs when posting information, though i dont have a database in this application.
 
 Secret keys and variables are stored in .env file and cant be accessed.
-## Describe the following parts, how you are using them and what their purpose is
 
 ### Reversed proxy
 Nginx is used as the reversed proxy server. It listen to port 443 (https) and reads the self signed certificates that allows us running https. It has been configured to listen at port 80 (http) and redirect them to 443. (Nginx default file).
@@ -32,13 +28,13 @@ The third party module: "dotenv" is used in this assignment to load environment 
 Storing configuration in the environment separate from code is based on "the tweleve-factor app methodology". 
 
 It should only include environment-specific values such as database passwords or API keys. Your production database should have a different password than your development database.
-## What differs in your application when running it in development from running it in production?
+## What differs in the application when running it in development from running it in production?
 The node.js application runs more effective by the command NODE_ENV=production. In production you need to run in https, either by using a proxyserver or make the app itself create a https server. You also need secured session cookies.
 
 NODE_ENV also remove stack traces in error pages.  
 
 Allot of the environment variables also changes, including changing the redirecit from authent. and details like the webhooks delivery adress. 
-## Which extra modules did you use in the assignment? Motivate the use of them and how you have make sure that they are secure enough for production
+## Extra Modules
 ### https://snyk.io
 I used snyk to run a security test on my dependencies. This was the result:
 ![Snyk Test](rh222ki-examination-3/snyktest.PNG)
@@ -75,7 +71,7 @@ Push is an awesome module that delivers notifications. I made my own solution to
 ### fs-extra
 Reads the sslcerts files in the database so an https server can be created.
 
-## Have you implemented any extra features (see below)? If so, describe them. If you are aiming for a higher grade here is also the chance to motivate it
+## Extra Features
 
 ### GitHub OAuth Application
 Used to login to my application. There is allot of potential here that i didnt have time to use, i simply use it as a method to access my application feutres/functions.
