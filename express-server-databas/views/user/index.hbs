@@ -1,0 +1,26 @@
+{{#if nouser}}
+<h1>CUSTER IO</h1>
+<p>Login to enjoy the CUSTER IO applications.</p>
+{{/if}}
+{{>validationSummary}}
+{{#if username}}
+<h1>Applications</h1>
+
+<table class="table table-hover">
+  <caption>List of Applications</caption>
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Application</th>
+      <th scope="col">About</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each application}}
+    <tr>
+      <th scope="row"><a class="nav-link" href="{{this.ip}}" target="_blank">{{this.app}}</a></th>
+      <th>{{this.info}}</th>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}

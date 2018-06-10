@@ -1,0 +1,11 @@
+<h1><span class="fa fa-edit"></span>Profile</h1>
+
+  {{>validationSummary}}
+  {{#if username }}
+    {{#each member}}
+      <div class="form-label-group">
+        <h2>User: {{this.name}}</h2>
+      </div>
+      <a type="button" class="btn btn-lg btn-primary" href="/logout">Logout</a>
+    {{/each}}
+  {{/if}}
