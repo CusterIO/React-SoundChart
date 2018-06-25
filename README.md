@@ -6,4 +6,4 @@ This project constructed a SPA with the **React** framework, using typescript/ja
 
 Detailed information available at: [Post Mortem](https://github.com/CusterIO/React-SoundChart/wiki/Post-Mortem)
 
-The application is available at: https://app.custer.io
+The production version of the application is available at: https://app.custer.io
